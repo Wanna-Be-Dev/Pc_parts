@@ -1,0 +1,374 @@
+﻿* {
+    box-sizing: border-box;      
+}
+html {
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: #444;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #222831;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(#e66465, #9198e5);
+    border-radius: 20px;
+}
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: linear-gradient(135deg, #65799b 0%,#5e2563 100%);
+    }
+
+body {
+    font-family: sans-serif;
+    background: #1e2134;
+    color: white;
+    height:100%;
+    width:100%;
+    padding:0;
+    margin:0;
+}
+/* ---------------------------------------nav ---------------------------------------*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    z-index: 100;
+    position: relative; 
+}
+
+li {
+    float: left;
+    border-right: 1px solid #bbb;
+}
+
+    li:last-child {
+        border-right: none;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+        li a:hover:not(.active) {
+            background-color: #111;
+        }
+
+
+
+
+/* --------------------------------------- box ---------------------------------------*/
+
+
+@import url(https://fonts.googleapis.com/css?family=Montserrat:800,200);
+
+.container1 {
+    font-family: montserrat;
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: #1e2134;
+    line-height: 1.7;
+    color: #fff;
+    transform: skewY(-5deg);
+    position: relative;
+    top: -200px;
+}
+
+.bg-text-container {
+    transform: translateX(-50%);
+    left: 50%;
+    position: absolute;
+    z-index: -9;
+}
+
+
+@keyframes text-scrolling {
+    0% {
+        transform: translate3d(-100%, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(0%, 0, 0);
+    }
+}
+
+.animate-text {
+    animation: text-scrolling 20s linear infinite;
+    will-change: transform;
+    display: block;
+    position: relative;
+    white-space: nowrap;
+}
+.left
+{
+    animation-direction: reverse;
+}
+
+.animate-text > span 
+{
+    font-size: 280px;
+    color: transparent;
+    -webkit-text-stroke: 2px white;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 0.75;
+    min-width: auto;
+    font-weight: 800;
+}
+
+.container {
+    padding: 30px;
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    background: rgba(255, 255, 253, 0.25);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.6px);
+    -webkit-backdrop-filter: blur(8.6px);
+    
+}
+    .col
+    {
+    max-width: 600px;
+    margin: 0;
+    }
+    .col > h1 
+    {
+        font-size: 90px;
+        margin: 0;
+    }
+    .col > p 
+    {
+        font-size: 18px;
+        font-weight: 200;
+        margin: 0;
+    }
+/* --------------------------------------- about ---------------------------------------*/
+.container2 {
+    position:relative;
+    top: -300px;
+    background: linear-gradient(135deg, #65799b 0%,#5e2563 100%);
+    height: 700px;
+    width: 100%;
+    z-index: -1;
+}
+    .container2 > .info-box {
+        position: relative;
+        top: 300px;
+        padding: 30px;
+        max-width: 1000px;
+        width: 100%;
+        margin: 0 auto;
+        background: rgba(255, 255, 253, 0.25);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8.6px);
+        -webkit-backdrop-filter: blur(8.6px);
+       
+    }
+
+.info-box > h1 {
+    font-size: 60px;
+    font-family: montserrat;
+    text-align:center;
+}
+/* --------------------------------------- slideup ---------------------------------------*/
+.ghost {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.slideUp {
+    animation-name: slideUp;
+    -webkit-animation-name: slideUp;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+@-webkit-keyframes slideUp {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+/* --------------------------------------- pc ---------------------------------------*/
+
+.container3 {
+    position: relative;
+    top: -300px;
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+.part-list {
+    
+    margin:300px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.pc-box {
+    position: relative;
+    box-shadow: 0px 0px 20px 10px #787474;
+    
+    width: 500px;
+    height: 500px;
+}
+
+.pc {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    z-index: 0;
+    
+}
+.cooler, .gpu, .memory, .power_sup, .storage, .cpu {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    transition: 0.5s;
+    
+    z-index: -2;
+    opacity:0;
+}
+.active {
+    opacity: 1;
+    transition: opacity 0.5s ease-out; /* It slowly shows the element as we place the mouse on the box and when the time reaches 2 seconds, it is fully visible. */
+    -webkit-transition: opacity 0.5s ease-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    z-index: 3;
+}
+
+.button1 {
+    background: linear-gradient(135deg, #C56CD6 0%,#3425AF 100%);
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: "Monaco",monospace;
+    font-size:25px;
+}
+    .button1:hover {
+        border: solid white 2px;
+        background-image: linear-gradient(to right, #e96443 0%, #904e95 51%, #e96443 100%);
+        color: white;
+    }
+/* --------------------------------------- cpu  ---------------------------------------*/
+.background {
+    background: #1e2134;
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.text-box {
+    margin: 100px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.6px);
+    -webkit-backdrop-filter: blur(6.6px);
+    border: 1px solid rgba(255, 255, 255, 0.77);
+    padding: 30px;
+    line-height: 1.6;
+}
+.text-box > h1{
+    font-size:50px;
+} 
+.text-box > bl{
+    font-weight: bold;
+}
+
+.picture {
+    float: right;
+    height: auto;
+    width: auto;
+    animation: animate 4s infinite;
+}
+
+
+@keyframes animate {
+    0% {
+        transform: translate(0, 0px) scale(1.1);
+    }
+
+    50% {
+        transform: translate(0px, 20px);
+    }
+
+    100% {
+        transform: translate(0, -0px) scale(1.1);
+    }
+}
+    
+
+@media (max-width: 1245px) {
+}
+
+@media(max-width:1000px) {
+    /*tablets: */
+    .container {
+        width: 90%;
+    }
+    .info-box{
+        width:90%!important;
+    }
+    .container3 {
+        flex-direction: column;
+    }
+    .button1 {
+        margin:5px;
+        padding:10px;
+        font-size:15px;
+    }
+    .part-list{
+        margin:100px;
+    }
+
+    @media only screen and (max-width:400px) {
+        /* phone*/
+    }
